@@ -6,7 +6,6 @@ https://www.youtube.com/watch?v=rbasThWVb-c&feature=youtu.be
 import curses
 import random
 
-
 s = curses.initscr()  # Initialize screen
 curses.curs_set(0)  # Hide cursor
 sh, sw = s.getmaxyx()  # Get height and width

@@ -1,6 +1,7 @@
 import curses
 import random
 
+
 class Snake():
     """Snake object"""
 
