@@ -29,7 +29,7 @@ class Snake():
                 0, self.width
         ] or self.snake[0] in self.snake[1:]:
             curses.endwin()
-            quit()
+            exit()
 
     def _point_head(self, key):
         new_head = [self.snake[0][0], self.snake[0][1]]
@@ -53,8 +53,7 @@ class Snake():
             self.window.addch(tail[0], tail[1], ' ')
 
     def _draw(self):
-        self.window.addch(self.snake[0][0], self.snake[0][1],
-                          curses.ACS_CKBOARD)
+        self.window.addch(self.snake[0][0], self.snake[0][1], curses.ACS_CKBOARD)
 
     def __call__(self):
         # Head position
