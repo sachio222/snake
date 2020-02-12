@@ -1,5 +1,11 @@
+"""
+From this video by Engineer Man:
+https://www.youtube.com/watch?v=rbasThWVb-c&feature=youtu.be
+"""
+
 import curses
 import random
+
 
 s = curses.initscr()  # Initialize screen
 curses.curs_set(0)  # Hide cursor
