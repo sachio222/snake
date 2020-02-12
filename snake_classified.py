@@ -10,7 +10,8 @@ class Snake():
         # Define initial snake head position
         self.width, self.height, self.window = sw, sh, w
 
-        self.snk_x = self.width // 3
+        # Start position
+        self.snk_x = self.width // 4
         self.snk_y = self.height // 2
 
         # Snake is a vector of coordinates
