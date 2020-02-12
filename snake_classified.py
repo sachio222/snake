@@ -28,20 +28,23 @@ class Snake():
         if self.snake[0][0] in [0, self.height] or self.snake[0][1] in [
                 0, self.width
         ] or self.snake[0] in self.snake[1:]:
+            # window.erase()
+            # self.reset(self.width, self.height, self.window)
             curses.endwin()
             exit()
 
     def _point_head(self, key):
+
         new_head = [self.snake[0][0], self.snake[0][1]]
 
         # Update new head based on key press
         if key == curses.KEY_UP:
             new_head[0] -= 1
-        if key == curses.KEY_RIGHT:
+        elif key == curses.KEY_RIGHT:
             new_head[1] += 1
-        if key == curses.KEY_DOWN:
+        elif key == curses.KEY_DOWN:
             new_head[0] += 1
-        if key == curses.KEY_LEFT:
+        elif key == curses.KEY_LEFT:
             new_head[1] -= 1
 
         # Puts new head at the start of the snake
@@ -60,6 +63,7 @@ class Snake():
         return self.snake[0]
 
     get_pos = __call__
+    reset = __init__
 
 
 class Food():
@@ -94,6 +98,7 @@ s = curses.initscr()  # Initialize screen
 curses.curs_set(0)  # Hide cursor
 height, width = s.getmaxyx()  # Get height and width
 window = curses.newwin(height, width, 0, 0)  # Define window
+window.border()
 window.keypad(1)  # Enable Keyboard input
 window.timeout(88)  # Refresh rate
 
